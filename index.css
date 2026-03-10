@@ -31,7 +31,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 clamp(20px,5vw,72px);
+    padding: 0 clamp(0px,5vw,72px);
     height: 68px;
     background: linear-gradient(180deg, rgba(8,6,8,0.98) 0%, rgba(8,6,8,0.0) 100%);
     transition: background var(--transition), backdrop-filter var(--transition);
@@ -45,7 +45,7 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     text-decoration: none;
     color: var(--text);
 }
@@ -56,9 +56,10 @@ body {
 }
 .logo-text {
     font-family: sans-serif;
-    font-size: 22px;
+    font-size: clamp(16px,3vw,26px);
     letter-spacing: 3px;
     color: var(--white);
+    margin-right: 2px;
 }
 .logo-text em {
     font-style: normal;
@@ -76,7 +77,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.5px;
-    padding: 6px 14px;
+    padding: 6px clamp(2px,2vw,10px);
     border-radius: 6px;
     transition: color var(--transition);
 }
@@ -87,7 +88,7 @@ body {
     font-weight: 500;
     color: var(--gold);
     border: 1px solid var(--border);
-    padding: 7px 18px;
+    padding: 7px 0px;
     border-radius: 6px;
     margin-left: 8px;
     transition: background var(--transition), color var(--transition);
@@ -457,7 +458,7 @@ body {
 .coupon-box {
     border: 2px dashed rgba(0,0,0,0.3);
     border-radius: 10px;
-    padding: 14px 28px;
+    padding: 14px 20px 14px 10px;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -570,9 +571,13 @@ body {
     .footer-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
     .footer-nav { gap: 18px; }
 }
+    
 
 @media (max-width: 480px) {
     .hero-title { font-size: 56px; }
     .hero-actions { flex-direction: column;  }
     .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
+    .nav{
+        gap: 0px;
+    }
 }
